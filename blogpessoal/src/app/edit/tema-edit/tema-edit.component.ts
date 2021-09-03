@@ -15,8 +15,8 @@ export class TemaEditComponent implements OnInit {
   tema: Tema = new Tema()
   constructor(
      private   temaService: TemaService,
-     private router: Router,
-     private route: ActivatedRoute
+     private   router: Router,
+     private   route: ActivatedRoute
   ) { }
 
   ngOnInit(){

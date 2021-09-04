@@ -22,9 +22,12 @@ export class AuthService {
 
   cadastrar(user: User): Observable<User>{
     return this.http.post<User> ('https://blogideias.herokuapp.com/usuarios/cadastrar', user)
-
   }
-  logado(){
+
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`https://blogideias.herokuapp.com/usuarios/${id}`)
+  }
+    logado(){
     let ok:boolean = false
   if(environment.token != ''){
     ok = true

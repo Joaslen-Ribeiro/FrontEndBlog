@@ -28,7 +28,7 @@ export class AuthService {
     return this.http.get<User>(`https://blogideias.herokuapp.com/usuarios/${id}`)
   }
     logado(){
-    let ok:boolean = false
+    let ok: boolean = false
   if(environment.token != ''){
     ok = true
   }

@@ -23,6 +23,9 @@ token ={
    getByIdTema(id: number):Observable<Tema>{
      return this.http.get<Tema>(`https://blogideias.herokuapp.com/Tema/${id}`, this.token)
    }
+   getByNomeTema(nome: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`https://blogideias.herokuapp.com/Tema/nome/${nome}`,this.token)
+   }
 
    postTema(tema: Tema): Observable<Tema>{
      return this.http.post<Tema>('https://blogideias.herokuapp.com/Tema',tema, this.token)
